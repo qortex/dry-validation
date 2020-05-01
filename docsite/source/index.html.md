@@ -52,6 +52,9 @@ end
 
 contract = NewUserContract.new
 
+contract.call(email: 'jane@doe.org', age: '17').success?
+# false
+
 contract.call(email: 'jane@doe.org', age: '17')
 # #<Dry::Validation::Result{:email=>"jane@doe.org", :age=>17} errors={:age=>["must be greater than 18"]}>
 ```
